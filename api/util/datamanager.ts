@@ -8,7 +8,7 @@ const jsonFilePath = path.join(
   process.cwd(),
   'api',
   'testdata',
-  'runtimeData.json'
+  'runtimedata.json'
 );
 
 export function writeData(data: any) {

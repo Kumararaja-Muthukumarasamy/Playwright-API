@@ -31,3 +31,10 @@ jobs:
 
     - name: Run Playwright API tests
       run: npm run test:api
+
+    - name: Upload Playwright Report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: playwright-report
+        path: playwright-report/
