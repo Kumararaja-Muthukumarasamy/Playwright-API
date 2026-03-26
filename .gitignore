@@ -12,8 +12,9 @@ test-results/
 .DS_Store
 Thumbs.db
 
-# Runtime / temp data
-
+# Allure report and results
+allure-report/
+allure-results/
 
 # Env files (important)
 .env

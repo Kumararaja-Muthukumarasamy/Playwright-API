@@ -2,14 +2,16 @@
   "name": "playwright-api",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "test": "npx playwright test",
-  "test:api": "npx playwright test tests/api",
-  "test:headed": "npx playwright test --headed",
-  "test:debug": "npx playwright test --debug",
-  "test:report": "npx playwright show-report",
-  "test:env": "cross-env ENV=qa npx playwright test"
-},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:api": "npx playwright test tests/api",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
+    "test:env": "cross-env ENV=qa npx playwright test",
+    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:open": "npx allure open ./allure-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +19,9 @@
   "devDependencies": {
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.5.0",
+    "allure-commandline": "^2.38.1",
+    "allure-js-commons": "^3.6.0",
+    "allure-playwright": "^3.6.0",
     "cross-env": "^10.1.0",
     "typescript": "^5.9.3"
   },
