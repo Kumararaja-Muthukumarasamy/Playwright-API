@@ -10,6 +10,7 @@ test('Get user details with the client', async ({ request }) => {
 
     console.log('User:', body);
 
+     
     expect(response.status()).toBe(200);
     expect(body.username).toBeTruthy();
 })
