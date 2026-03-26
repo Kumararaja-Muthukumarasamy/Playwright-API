@@ -14,6 +14,12 @@ const configMap = {
     username: 'emilys',
     password: 'emilyspass',
     tokenExpiry: 30
+  },
+  prod: { 
+    baseUrl: 'https://dummyjson.com',
+    username: process.env.APP_USERNAME || '',
+    password: process.env.APP_PASSWORD || '',
+    tokenExpiry: 30
   }
 };
 
