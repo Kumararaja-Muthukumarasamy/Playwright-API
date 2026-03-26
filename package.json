@@ -10,22 +10,31 @@
     "test:report": "npx playwright show-report",
     "test:env": "cross-env ENV=qa npx playwright test",
     "allure:generate": "npx allure generate ./allure-results --clean",
-    "allure:open": "npx allure open ./allure-report"
+    "allure:open": "npx allure open ./allure-report",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@eslint/js": "^9.39.4",
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
     "allure-commandline": "^2.38.1",
     "allure-js-commons": "^3.6.0",
     "allure-playwright": "^3.6.0",
     "cross-env": "^10.1.0",
-    "typescript": "^5.9.3"
+    "eslint": "^9.39.4",
+    "globals": "^17.4.0",
+    "jiti": "^2.6.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.2"
   },
   "dependencies": {
+    "22": "^0.0.0",
     "dotenv": "^17.3.1",
     "xlsx": "^0.18.5"
   }

@@ -13,6 +13,9 @@ on:
           - dev
           - prod
 
+  pull_request:
+    branches: [main]
+
   schedule:
     - cron: '30 17 * * *'
 
@@ -44,6 +47,9 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
+
+      - name: Run Lint
+        run: npm run lint
 
       - name: Run Playwright API tests
         run: npm run test:api
