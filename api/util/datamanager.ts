@@ -8,7 +8,7 @@ const jsonFilePath = path.join(
   process.cwd(),
   'api',
   'testdata',
-  `runtimeData-${process.pid}.json`
+  'runtimeData.json'
 );
 
 export function writeData(data: any) {
@@ -17,7 +17,17 @@ export function writeData(data: any) {
 
 
 export function readData() {
-  return JSON.parse(fs.readFileSync(jsonFilePath, 'utf-8'));
+  if (!fs.existsSync(jsonFilePath)) {
+    throw new Error(`File not found: ${jsonFilePath}`);
+  }
+
+  const content = fs.readFileSync(jsonFilePath, 'utf-8');
+
+  if (!content) {
+    throw new Error(`File is empty: ${jsonFilePath}`);
+  }
+
+  return JSON.parse(content);
 }
 
 export function readExcel(sheetName: string = 'products') {
