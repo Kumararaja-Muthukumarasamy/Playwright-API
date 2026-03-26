@@ -13,7 +13,7 @@ test-results/
 Thumbs.db
 
 # Runtime / temp data
-api/testdata/runtimeData.json
+
 
 # Env files (important)
 .env
