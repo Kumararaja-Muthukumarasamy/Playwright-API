@@ -1,0 +1,27 @@
+{
+  "name": "playwright-api",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+  "test": "npx playwright test",
+  "test:api": "npx playwright test tests/api",
+  "test:headed": "npx playwright test --headed",
+  "test:debug": "npx playwright test --debug",
+  "test:report": "npx playwright show-report",
+  "test:env": "cross-env ENV=qa npx playwright test"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0",
+    "cross-env": "^10.1.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "xlsx": "^0.18.5"
+  }
+}
